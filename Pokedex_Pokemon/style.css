@@ -1,0 +1,151 @@
+/* Fondo Pokébola en secciones */
+.background-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.red-top {
+    background-color: red;
+    height: 45vh;
+    width: 100%;
+}
+
+.black-middle {
+    background-color: black;
+    height: 10vh;
+    width: 100%;
+}
+
+.white-bottom {
+    background-color: white;
+    height: 45vh;
+    width: 100%;
+}
+
+/* Círculo central Pokébola */
+.pokeball-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.circle-white {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-inner {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-core {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Pokedex general */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 60px; /* Aumentamos el tamaño */
+    margin-top: 90px; /* Lo bajamos un poco más */
+    position: relative;
+    z-index: 2;
+}
+
+.pokedex-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.pokemon-card {
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* Ocultar inicialmente paginación */
+.hidden {
+    display: none;
+}
+
+/* Caja amarilla para los filtros */
+.filter-box {
+    background-color: yellow;
+    padding: 15px;
+    margin-top: 30px;
+    margin-left: 40px; /* Mueve un poco a la derecha */
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: relative;
+}
+
+.filter-box .filter-section {
+    margin-bottom: 12px;
+}
+
+.filter-box label,
+.filter-box select,
+.filter-box input,
+.filter-box button {
+    font-size: 16px;
+}
