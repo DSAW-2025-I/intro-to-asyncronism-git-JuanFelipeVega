@@ -51,7 +51,7 @@ async function searchPokemon() {
         const data = await response.json();
         pokedexContainer.innerHTML = '';
         showPokemon(data);
-        paginationDiv.style.display = 'none'; // Oculta paginación en búsqueda individual
+        paginationDiv.style.display = 'none'; 
     } catch (error) {
         showError('Ocurrió un error al buscar el Pokémon.');
     }

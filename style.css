@@ -1,4 +1,4 @@
-/* Fondo Pokébola en secciones */
+/* Fondo Pokébola */
 .background-section {
     position: fixed;
     top: 0;
@@ -26,7 +26,7 @@
     width: 100%;
 }
 
-/* Círculo central Pokébola */
+
 .pokeball-button {
     position: fixed;
     top: 50%;
@@ -69,7 +69,7 @@
     border-radius: 50%;
 }
 
-/* Pokedex general */
+
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
@@ -79,11 +79,12 @@ body {
 h1 {
     text-align: center;
     color: black;
-    font-size: 60px; /* Aumentamos el tamaño */
-    margin-top: 90px; /* Lo bajamos un poco más */
+    font-size: 60px;
+    margin-top: 90px;
     position: relative;
     z-index: 2;
 }
+
 
 .pokedex-grid {
     display: grid;
@@ -92,7 +93,41 @@ h1 {
     margin-top: 20px;
     z-index: 2;
     position: relative;
+    padding: 0 10px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .pokedex-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 60px;
+    }
+
+    .pokeball-button {
+        width: 90px;
+        height: 90px;
+    }
+
+    .circle-white {
+        width: 65px;
+        height: 65px;
+    }
+
+    .circle-inner {
+        width: 45px;
+        height: 45px;
+    }
+
+    .circle-core {
+        width: 35px;
+        height: 35px;
+    }
+}
+
 
 .pokemon-card {
     background-color: white;
@@ -100,13 +135,14 @@ h1 {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .pokemon-card img {
     width: 100px;
     height: 100px;
 }
+
 
 #pagination {
     text-align: center;
@@ -121,17 +157,17 @@ h1 {
     font-size: 16px;
 }
 
-/* Ocultar inicialmente paginación */
+
 .hidden {
     display: none;
 }
 
-/* Caja amarilla para los filtros */
+
 .filter-box {
     background-color: yellow;
     padding: 15px;
     margin-top: 30px;
-    margin-left: 40px; /* Mueve un poco a la derecha */
+    margin-left: 40px;
     width: fit-content;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -148,4 +184,11 @@ h1 {
 .filter-box input,
 .filter-box button {
     font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+    .filter-box {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
