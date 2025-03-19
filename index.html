@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="background-section">
+        <div class="red-top"></div>
+        <div class="black-middle"></div>
+        <div class="white-bottom"></div>
+    </div>
+
+    <div class="pokeball-button">
+        <div class="circle-white">
+            <div class="circle-inner">
+                <div class="circle-core"></div>
+            </div>
+        </div>
+    </div>
+    <h1>Pokédex</h1>
+
+   
+    <div class="filter-box">
+        <div class="filter-section">
+            <label for="search">Buscar por nombre o ID:</label><br>
+            <input type="text" id="search">
+            <button id="searchButton">Buscar</button>
+        </div>
+
+        <div class="filter-section">
+            <label for="typeSelect">Filtrar por tipo:</label><br>
+            <select id="typeSelect">
+                <option value="">--Seleccionar tipo--</option>
+                <option value="fire">Fuego</option>
+                <option value="water">Agua</option>
+                <option value="grass">Planta</option>
+                <option value="electric">Eléctrico</option>
+                <option value="normal">Normal</option>
+                <option value="bug">Bicho</option>
+                <option value="poison">Veneno</option>
+                <option value="flying">Volador</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Roca</option>
+                <option value="ground">Tierra</option>
+                <option value="ghost">Fantasma</option>
+                <option value="dragon">Dragón</option>
+                <option value="ice">Hielo</option>
+                <option value="fighting">Lucha</option>
+                <option value="dark">Siniestro</option>
+                <option value="steel">Acero</option>
+                <option value="fairy">Hada</option>
+            </select>
+            <button id="typeButton">Buscar por tipo</button>
+        </div>
+
+        <div class="filter-section">
+            <button id="allButton">Mostrar toda la Pokédex</button>
+        </div>
+    </div>
+
+    <div id="pokedex" class="pokedex-grid"></div>
+
+    <div id="pagination" class="hidden">
+        <button id="prevPage">Anterior</button>
+        <button id="nextPage">Siguiente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
